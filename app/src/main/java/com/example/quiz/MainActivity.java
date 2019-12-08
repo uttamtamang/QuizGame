@@ -28,17 +28,17 @@ public class MainActivity extends AppCompatActivity {
         textViewHighscore = findViewById(R.id.text_view_highscore);
         loadHighscore();
 
-        Button buttonStartQuiz = findViewById(R.id.button_start_quiz);
+        Button buttonStartQuiz = findViewById(R.id.button_Exit);
         buttonStartQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startQuiz();
+                Exit();
             }
         });
     }
 
-    private void startQuiz() {
-        Intent intent = new Intent(MainActivity.this, QuizActivity.class);
+    private void Exit() {
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
         startActivityForResult(intent, REQUEST_CODE_QUIZ);
     }
 

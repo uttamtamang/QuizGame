@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="WELCOME TO Quiz"
+        android:text="WELCOME TO QUIZ"
         android:textColor="@android:color/white"
         android:textSize="35sp" />
 
@@ -21,7 +21,7 @@
         android:id="@+id/text_view_highscore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/button_start_quiz"
+        android:layout_above="@id/button_Exit"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"
         android:text="Highscore: 0"
@@ -29,10 +29,10 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/button_start_quiz"
+        android:id="@+id/button_Exit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Start Quiz"
+        android:text="EXIT"
         android:background="#D9AC2A"/>
 </RelativeLayout>

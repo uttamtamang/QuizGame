@@ -23,6 +23,7 @@ public class QuizActivity extends AppCompatActivity {
     public static final String EXTRA_SCORE = "extraScore";
     private static final long COUNTDOWN_IN_MILLIS = 15000;
 
+    private TextView textUser;
     private TextView textViewQuestion;
     private TextView textViewScore;
     private TextView textViewQuestionCount;
@@ -66,6 +67,12 @@ public class QuizActivity extends AppCompatActivity {
 
         textColorDefaultRb = rb1.getTextColors();
         textColorDefaultCd = textViewCountDown.getTextColors();
+
+        textUser = findViewById(R.id.text_view_user);
+        Bundle bundleForm = getIntent().getExtras();
+        if(bundleForm != null){
+            textUser.setText(bundleForm.getString("userName"));
+        }
 
         QuizDbHelper dbHelper = new QuizDbHelper(this);
         questionList = dbHelper.getAllQuestions();
@@ -192,10 +199,12 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void finishQuiz() {
-        Intent resultIntent = new Intent();
-        resultIntent.putExtra(EXTRA_SCORE, score);
-        setResult(RESULT_OK, resultIntent);
+//        Intent resultIntent = new Intent(QuizActivity.this, MainActivity.class);
+//        resultIntent.putExtra(EXTRA_SCORE, score);
+//        setResult(RESULT_OK, resultIntent);
+        Toast.makeText(this, "You have scored :" + score + "Points", Toast.LENGTH_SHORT).show();
         finish();
+        //startActivity(resultIntent);
     }
 
     @Override

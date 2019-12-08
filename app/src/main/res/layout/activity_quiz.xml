@@ -13,7 +13,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Score: 0"
-        android:textColor="@android:color/white" />
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#2EE613"/>
 
     <TextView
         android:id="@+id/text_view_question_count"
@@ -21,6 +23,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/text_view_score"
         android:text="Question: 1/x"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:id="@+id/text_view_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_question_count"
+        android:text="User Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:textColor="@android:color/white" />
 
     <TextView
@@ -28,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:text="00:30"
+        android:text="00:15"
         android:textColor="@android:color/white"
         android:textSize="40sp" />
 
